@@ -90,7 +90,6 @@ git clone ~/test-repo
 cd ./test-repo
 ```
 
-내 홈 Dir 내에 `clone`이라는 하위 Dir를 만들고, 그 안에서 아까 만든 원격 저장소를 복제했다. `
-git clone [PATH]`는 `[PATH]`에 있는 원격 저장소의 내용을 현재 경로 아래에 복제한다.
+내 홈 Dir 내에 `clone`이라는 하위 Dir를 만들고, 그 안에서 아까 만든 원격 저장소를 복제했다. `git clone [PATH]`는 `[PATH]`에 있는 원격 저장소의 내용을 현재 경로 아래에 복제한다.
 
 -- 수정중 --
