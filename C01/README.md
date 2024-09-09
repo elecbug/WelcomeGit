@@ -113,7 +113,6 @@ echo "Hello, Git!" > hello.txt
 Git에 변경사항을 업로드하기 위해서는 우선 업로드 할 파일의 목록을 추가해야 한다. 이는 `add` 명령으로 이루어지며, 다음과 같이 사용한다.
 
 ```sh
-cd ~/cloned/test-repo
 git add hello.txt
 ```
 
@@ -135,7 +134,6 @@ git config --global user.name [YOUR_NAME]
 추가만 한다고 끝이 아니다. 이제 변경사항을 Commit(이하 커밋) 해야한다. 커밋은 변경사항의 리스트들을 묶어 메시지와 함께 한 버전으로서 기록을 남기는 과정을 말한다.
 
 ```sh
-cd ~/cloned/test-repo
 git commit -m "feat: start to learn git"
 ```
 
@@ -156,7 +154,6 @@ git commit -m "feat: start to learn git"
 지금은 원격 저장소에서 버전을 끌어와서 수정하고, 그 내용을 다시 원격 저장소로 업로드하는 과정이므로 둘 중 푸시가 맞다. 따라서 푸시를 진행하려면 다음과 같이 진행한다.
 
 ```sh
-cd ~/cloned/test-repo
 git push
 ```
 
@@ -172,7 +169,6 @@ rm -rf ./test-repo
 위 커맨드를 실행하면 복제 저장소가 사라진다. 이제 다시 원격 저장소에서 버전을 불러와보자.
 
 ```sh
-cd ~/cloned
 git clone ~/test-repo
 ls ./test-repo
 cat ./test-repo/hello.txt
