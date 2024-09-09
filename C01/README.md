@@ -80,7 +80,7 @@ sudo apt-get install git
 이제 우리의 Bare repository를 만들어 보자. 아까도 말했듯이 원격 저장소이지만 지금은 그냥 내 컴퓨터 안에 만들거다.
 
 ```sh
-mk폴더 ~/test-repo && cd ~/test-repo
+mkdir ~/test-repo && cd ~/test-repo
 git init --bare
 ```
 
@@ -93,9 +93,8 @@ git init --bare
 ### Git clone
 
 ```sh
-mk폴더 ~/cloned && cd ~/cloned
+mkdir ~/cloned && cd ~/cloned
 git clone ~/test-repo
-cd ./test-repo
 ```
 
 내 홈 폴더 내에 `cloned`이라는 하위 폴더를 만들고, 그 안에서 아까 만든 원격 저장소를 복제했다. `git clone [PATH]`는 `[PATH]`에 있는 원격 저장소의 내용을 현재 경로 아래에 복제한다.
@@ -105,6 +104,7 @@ cd ./test-repo
 이제 파일을 추가할 차례다. 복제된 저장소에 파일을 만들어보자. 간단하게 `Hello, Git!`이라는 문구를 가진 텍스트 파일을 추가한다.
 
 ```sh
+cd ~/cloned/test-repo
 echo "Hello, Git!" > hello.txt
 ```
 
@@ -113,6 +113,7 @@ echo "Hello, Git!" > hello.txt
 Git에 변경사항을 업로드하기 위해서는 우선 업로드 할 파일의 목록을 추가해야 한다. 이는 `add` 명령으로 이루어지며, 다음과 같이 사용한다.
 
 ```sh
+cd ~/cloned/test-repo
 git add hello.txt
 ```
 
@@ -125,6 +126,7 @@ git add hello.txt
 추가만 한다고 끝이 아니다. 이제 변경사항을 Commit(이하 커밋) 해야한다. 커밋은 변경사항의 리스트들을 묶어 메시지와 함께 한 버전으로서 기록을 남기는 과정을 말한다.
 
 ```sh
+cd ~/cloned/test-repo
 git commit -m "feat: start to learn git"
 ```
 
@@ -145,6 +147,7 @@ git commit -m "feat: start to learn git"
 지금은 원격 저장소에서 버전을 끌어와서 수정하고, 그 내용을 다시 원격 저장소로 업로드하는 과정이므로 둘 중 푸시가 맞다. 따라서 푸시를 진행하려면 다음과 같이 진행한다.
 
 ```sh
+cd ~/cloned/test-repo
 git push
 ```
 
@@ -160,6 +163,7 @@ rm -rf ./test-repo
 위 커맨드를 실행하면 복제 저장소가 사라진다. 이제 다시 원격 저장소에서 버전을 불러와보자.
 
 ```sh
+cd ~/cloned
 git clone ~/test-repo
 ls ./test-repo
 cat ./test-repo/hello.txt
