@@ -121,6 +121,15 @@ git add hello.txt
 
 주의할 점은 `git add .`을 사용하는 현재 경로를 기준으로 하기 때문에, 정확히 모든 파일을 업로드하려면 현재 경로에 따라 `.` 대신 Git 최상위 경로를 적절히 넣어야 할 것이다. (만약 현재 위치가 한 폴더 아래라면 `..`을 대신 사용할 수 있다)
 
+### Git config
+
+Git에는 현재 편집자가 누구인지 알려주어야 하는 특징이 있다. 간단히 아래와 같이 설정을 완료하자.
+
+```sh
+git config --global user.email [YOUR_EMAIL@example.com]
+git config --global user.name [YOUR_NAME]
+```
+
 ### Git commit
 
 추가만 한다고 끝이 아니다. 이제 변경사항을 Commit(이하 커밋) 해야한다. 커밋은 변경사항의 리스트들을 묶어 메시지와 함께 한 버전으로서 기록을 남기는 과정을 말한다.
