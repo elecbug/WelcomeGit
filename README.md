@@ -11,6 +11,7 @@
 |------|-----|-----------|--|
 |# 01|What is Git?|Git이 무엇인지 알아보고, 기본적인 Git command에 대해 학습한다.|[Link](./C01/README.md)|
 |# 02|Using GitHub|앞서 배운 Git의 기초를 토대로 GitHub 서비스를 이용한다.|[Link](./C02/README.md)|
+|# 03|Merge confusion|Git merge에 대해 이해하고, 충돌을 해결한다.|[Link](./C03/README.md)|
 
 ## 이하 기타 사항
 1. 본 문서는 한국어를 사용하여 작성되어 있으며, 본 문서의 번역에 관심이 있으신 분은 [아래 이메일](mailto:deveb1479@gmail.com)로 문의 바랍니다.
@@ -20,4 +21,4 @@
 Email: deveb1479@gmail.com
 
 ## Version Info.
-v0.1.2
+v0.2.0
