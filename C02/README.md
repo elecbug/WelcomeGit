@@ -29,7 +29,9 @@ GitHub를 사용하기 위해서는 계정이 필요하다. 먼저 [GitHub](http
 > `README.md` 파일은 저장소에 대한 설명을 적는 공간으로, 특히 GitHub에서는 최상의 경로의 `README.md` 파일은 저렇게 대문짝만하게 보여준다. 누군가에게 프로젝트를 공개할 때는 해당 파일을 잘 작성해두자
 >
 
-## Clone from Web
+## 실습
+
+### Clone from Web
 
 이제 내 컴퓨터에서 원격 저장소의 내용을 복제해 올 시간이다. 앞서 Bare repository를 만든 것을 기억하는가? `git clone [PATH]`를 통해 `[PATH]`에 있는 원격 저장소를 현재 위치로 클론했었다. 이번에는 저 `[PATH]`에 웹 상의 경로를 넣어 복제할 것이다.
 
@@ -39,7 +41,9 @@ git clone https://github.com/[YOUR_NAME]/my-repo
 
 위 명령어를 입력하면 내가 웹에서 만든 원격 저장소의 내용이 내 컴퓨터로 클론된 것을 확인할 수 있다. 만약 `README.md` 파일을 만들었다면, 파일도 함께 클론되었을 것이다.
 
-Git config는 저번에 설정하였으니, 이번에는 그냥 푸시하면 될 것이다. 푸시를 시도하면 어떤 메시지가 뜨는 것을 볼 수 있는데, 로그인을 하라는 내용이 나오게 된다. 하지만 로그인을 하여도 로그인이 되지는 않는다. 해당 기능은 더이상 지원되지 않는 기능으로, 로그인을 통한 GitHub 푸시는 더이상 불가능하다는 의미이다.
+Git config는 저번에 설정하였으니, 이번에는 그냥 푸시하면 될 것이다. 하지만 권한과 관련된 이유로 푸시가 거부되는 모습을 볼 수 있다. 공개 저장소이기에 아무나 클론할 수는 있지만, 그렇다고 아무나 푸시할 수 있다면 당연히 문제가 될 것이기 때문이다.
+
+### Token
 
 우리는 다시 GitHub로 가서 오른쪽 제일 위의 아이콘을 눌러 메뉴 창을 열어, `Settings`로 이동할 수 있다. 그 후  `Developer Settings`, `Personal access tokens/Tokens (classic)`으로 이동해  토큰 생성 화면으로 이동할 수 있다.
 
@@ -48,6 +52,8 @@ GitHub 토큰은 내 GitHub 계정에 대한 부분적인 권한을 부여하는
 ![](./res/image05.png)
 
 `Note`에는 토큰의 설명(사실상 이름)을 적고, 아래에 토큰의 유효기간을 설정한다. 그 후 여러 권한 중 제일 위에 있는 `repo` 체크 박스를 체크해 저장소에 대한 전반적인 권한을 부여하고, 토큰을 생성하면 한번만 볼 수 있는 `ghp_...`으로 이루어진 토큰을 복사할 수 있다. 해당 토큰을 복사한 뒤 아래와 같이 사용한다.
+
+### Push
 
 ```sh
 git remote add origin https://[YOUR_NAME]:[GITHUB_TOKEN]@github.com/[YOUR_NAME]/my-repo
@@ -65,9 +71,21 @@ git remote remove origin
 git push --set-upstream origin master
 ```
 
+위 커맨드에서 보았던 `remote`라던가 `origin`이라던가 하는 내용은 다음에 좀 더 자세히 알아보도록 하고, 지금은 기존에 클론했던 `https://github.com/[YOUR_NAME]/my-repo`를 `https://[YOUR_NAME]:[GITHUB_TOKEN]@github.com/[YOUR_NAME]/my-repo`로 바꾸어 인증을 진행한다고 이해하고 있자.
+
 이후에는 토큰이 유효한 이상 간단히 `git push/pull`로 사용 가능하다.
 
-만약 내 개인 컴퓨터라면 영구 토큰을 하나 발급하여 저장해두고 사용함으로서 간단히 GitHub에 접근할 수 있을 것이다.
+만약 내 개인 컴퓨터라면 토큰을 하나 발급하여 로컬에 저장해두고 사용함으로서 간단히 GitHub에 접근할 수 있을 것이다.
+
+또한 비공개 저장소에 저장된 내용을 클론하려고 한다면 이 역시 토큰이 필요한데, 기본적으로 클론을 시도하면 로그인을 하라는 내용이 나오게 된다. 하지만 비밀번호로는 로그인을 하여도 로그인이 되지는 않는다. 해당 기능은 더이상 지원되지 않는 기능으로, 로그인을 통한 GitHub 접근은 더이상 불가능하다는 의미이다. 대신 비밀번호 자리에 토큰을 넣어 사용할 수 있다.
+
+또는 애초에 클론을 진행할 때 토큰을 사용하여 아래와 같이 사용할 수도 있다.
+
+```sh
+git clone https://[YOUR_NAME]:[GITHUB_TOKEN]@github.com/[YOUR_NAME]/my-repo
+```
+
+이렇게 클론된 저장소는 클론될 때 부터 경로에 토큰이 포함되므로, 별도의 과정없이 커밋과 풀, 푸시 등이 모두 가능하므로 번거로운 과정을 피하고 싶다면 이 방법을 추천한다.
 
 > 만약 당신이 VS Code와 같은 도구를 사용하여 프로그래밍한다면, 해당 도구에서 GitHub 계정에 로그인 해두고, 해당 도구의 Shell 창을 이용하는 방식으로 토큰 없이 내 GitHub 계정에 손쉽게 접근 가능하다. 보통은 이 방식을 이용하는 것이 좋다.
 >
@@ -90,5 +108,6 @@ GitHub는 그 외에도 마치 커뮤니티와 같은 여러가지 기능을 제
 
 ### References
 1. Test alone
+2. [GitHub Docs - Managing your personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
 
 <p align=center><a href="../README.md">Go to main menu</a></p>
