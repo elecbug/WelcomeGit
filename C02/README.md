@@ -12,7 +12,7 @@ GitHub를 사용하기 위해서는 계정이 필요하다. 먼저 [GitHub](http
 
 꽤나 현대적인 디자인의 페이지가 우리를 반겨준다. 이제 우측 상단의 Sign up 버튼을 눌러 계정을 생성한 뒤 로그인하자. ~~나선 은하가 뭔지 안다면 좋을 것이다.~~
 
-이제 내 고유한 닉네임이 생겼다. `https://github.com/[YOUR_NICKNAME]`으로 이동하면 내 프로필을 볼 수 있다.
+이제 내 고유한 닉네임이 생겼다. `https://github.com/[YOUR_NAME]`으로 이동하면 내 프로필을 볼 수 있다.
 
 ![](./res/image02.png)
 
@@ -47,7 +47,7 @@ GitHub 토큰은 내 GitHub 계정에 대한 부분적인 권한을 부여하는
 
 ![](./res/image05.png)
 
-`Note`에는 토큰의 설명(사실상 이름)을 적고, 토큰의 유효기간을 설정한다. 그 후 바로 아래에 있는 `repo` 체크 박스를 체크해 저장소에 대한 권한을 설정하고, 토큰을 생성하면 한번만 볼 수 있는 `ghp_...`으로 이루어진 토큰을 복사할 수 있다. 해당 토큰을 복사한 뒤 아래와 같이 사용한다.
+`Note`에는 토큰의 설명(사실상 이름)을 적고, 아래에 토큰의 유효기간을 설정한다. 그 후 여러 권한 중 제일 위에 있는 `repo` 체크 박스를 체크해 저장소에 대한 전반적인 권한을 부여하고, 토큰을 생성하면 한번만 볼 수 있는 `ghp_...`으로 이루어진 토큰을 복사할 수 있다. 해당 토큰을 복사한 뒤 아래와 같이 사용한다.
 
 ```sh
 git remote add origin https://[YOUR_NAME]:[GITHUB_TOKEN]@github.com/[YOUR_NAME]/my-repo
@@ -59,11 +59,13 @@ git remote add origin https://[YOUR_NAME]:[GITHUB_TOKEN]@github.com/[YOUR_NAME]/
 git remote remove origin
 ```
 
-이제 아래의 커맨드를 사용하면 변경사항을 푸시할 수 있다. 이후에는 토큰이 유효한 이상 간단히 `git push/pull`로 사용 가능하다.
+이제 아래의 커맨드를 사용하면 변경사항을 푸시할 수 있다.
 
 ```sh
 git push --set-upstream origin master
 ```
+
+이후에는 토큰이 유효한 이상 간단히 `git push/pull`로 사용 가능하다.
 
 만약 내 개인 컴퓨터라면 영구 토큰을 하나 발급하여 저장해두고 사용함으로서 간단히 GitHub에 접근할 수 있을 것이다.
 
@@ -77,8 +79,8 @@ GitHub는 그 외에도 마치 커뮤니티와 같은 여러가지 기능을 제
 1. 사용자 프로필을 수정해보자. 아이콘 및 소개, 경력 등을 수정할 수 있다.
 2. [YOUR_NAME]/[YOUR_NAME] Repository를 만들어보자. 해당 저장소의 README 파일은 내 프로필에서 표시되는 일종의 메인 페이지이다.
 3. 검색을 이용해 다른 사람의 프로필과 공개되어있는 저장소들을 보러가자. 대표적으로 [Microsoft](https://github.com/microsoft), [Apple](https://github.com/apple) 등의 저장소를 구경할 수 있을 것이다. ~~아니면 [이 아저씨](https://github.com/torvalds)의 [그것](https://github.com/torvalds/linux)~~
-4. 마음에 드는 저장소를 Starring 할 수 있다. 몇가지 저장소를 Starred 해보자.
-5. 마음에 드는 유저를 팔로우 할 수도 있다. 몇 명의 유저를 찾아 팔로우를 걸어보자. ~~[이 아저씨](https://github.com/torvalds)는 팔로잉이 0이다.~~
+4. 마음에 드는 저장소를 Starring 할 수 있다. 몇가지 저장소를 Starred로 만들어 보자.
+5. 마음에 드는 유저를 팔로우 할 수도 있다. 몇 명의 유저를 찾아 팔로우를 걸어보자. ~~[이 아저씨](https://github.com/torvalds)는 팔로잉이 0이니까 팔로우 하지 말자.~~
 
 ---
 

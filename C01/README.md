@@ -131,6 +131,8 @@ git config --global user.email [YOUR_EMAIL@example.com]
 git config --global user.name [YOUR_NAME]
 ```
 
+`--global` Flag는 해당 설정을 이 저장소에 대해서만 적용할 건지, 아니면 전역적으로(OS 유저 단위) 설정할 것인지를 정하는 Flag로 특별한 이유가 없다면 `--global`로 하자.
+
 ### Git commit
 
 추가만 한다고 끝이 아니다. 이제 변경사항을 Commit(이하 커밋) 해야한다. 커밋은 변경사항의 리스트들을 묶어 메시지와 함께 한 버전으로서 기록을 남기는 과정을 말한다.
