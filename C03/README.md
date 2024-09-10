@@ -1,4 +1,4 @@
-# Merge confusion
+# Merge conflict
 
 ## 이게 Merge?
 
