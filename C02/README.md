@@ -20,7 +20,7 @@ GitHub를 사용하기 위해서는 계정이 필요하다. 먼저 [GitHub](http
 
 ![](./res/image03.png)
 
-몇가지 옵션을 조정할 수 있는데, 간단히 `Repository name`을 `my-repo`로 하고 저장소를 생성해보자. 접근 수준은 `Public`으로 설정하고, `Add a README file`을 체크하여 저장소 생성과 동시에 첫 파일을 추가할 수 있다.
+몇가지 옵션을 조정할 수 있는데, 간단히 `Repository name`을 `my-repo`로 하고 저장소를 생성해보자. 접근 수준은 `Public`으로 설정하고, `Add a README file`을 체크하여 저장소 생성과 동시에 첫 파일을 추가할 수 있다. 우리가 이전 장에서 `git init --bare`로 생성하던 저장소를 GitHub에서 웹 브라우저로 생성한 것이라고 볼 수 있다.
 
 ![](./res/image04.png)
 
