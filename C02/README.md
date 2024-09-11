@@ -74,7 +74,14 @@ git push --set-upstream origin master
 
 위 커맨드에서 보았던 `remote`라던가 `origin`이라던가 하는 내용은 다음에 좀 더 자세히 알아보도록 하고, 지금은 기존에 클론했던 `https://github.com/[YOUR_NAME]/my-repo`를 `https://[YOUR_NAME]:[GITHUB_TOKEN]@github.com/[YOUR_NAME]/my-repo`로 바꾸어 인증을 진행한다고 이해하고 있자.
 
-이후에는 토큰이 유효한 이상 간단히 `git push/pull`로 사용 가능하다.
+이후에는 토큰이 유효한 이상 간단히 `git push/pull`로 사용 가능하다. 아래의 순서를 따라한 뒤 웹 브라우저에서 내 저장소를 다시 확인해보자.
+
+```
+echo "Hello, GitHub!" > github.txt
+git add .
+git commit -m "feat: add github.txt"
+git push
+```
 
 만약 내 개인 컴퓨터라면 토큰을 하나 발급하여 로컬에 저장해두고 사용함으로서 간단히 GitHub에 접근할 수 있을 것이다.
 
