@@ -5,11 +5,14 @@
 
 ## 설명서
 
-보통 `[YOUR_NAME]`같은 "[]" 사이에 있는 내용은 해당 변수를 입력하라는 의미로 쓰인 것입니다. 가령 닉네임을 `hello`로 생성하고, `https://github.com/[YOUR_NAME]`은 `https://github.com/hello`으로 가라는 의미입니다.
+- 보통 `[YOUR_NAME]`같은 "[]" 사이에 있는 내용은 해당 변수를 입력하라는 의미로 쓰인 것입니다. 가령 닉네임을 `hello`로 생성하고, `https://github.com/[YOUR_NAME]`은 `https://github.com/hello`로 바꾸라는 의미입니다.
+
+## FAQ
+
+- 윈도우인데 잘 안돼요.
+  - 본 설명은 리눅스 사용을 가정하고 쓰였습니다. 데스크탑에 간단히 WSL로 우분투를 설치 하실 수 있고, 아니면 ChatGPT한테 복붙하고 윈도우용으로 바꿔달라고 하면 바꿔줍니다.
 
 ## 구성
-
--- 아직 제작 중... --
 
 |Course|Title|Description|Go|
 |------|-----|-----------|--|
@@ -20,11 +23,13 @@
 |# 04|Fork and PR|Fork와 PR에 대해 이해하고, 진정한 의미의 협업을 배운다.|[Link](./C04/README.md)|
 
 ## 이하 기타 사항
+
 1. 본 문서는 한국어를 사용하여 작성되어 있으며, 본 문서의 번역에 관심이 있으신 분은 [아래 이메일](mailto:deveb1479@gmail.com)로 문의 바랍니다.
 2. 본 문서의 수정 사항 및 오류 등에 대한 문의는 Pull request 및 Issue 기능을 활용하여 주시기 바랍니다.
 
 ## Maintainer Information
+
 Email: deveb1479@gmail.com
 
 ## Version Info.
-v0.4.0
+v0.4.1
