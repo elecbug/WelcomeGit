@@ -22,4 +22,4 @@
 Email: deveb1479@gmail.com
 
 ## Version Info.
-v0.2.0
+v0.3.0
