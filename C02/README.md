@@ -37,6 +37,7 @@ GitHub를 사용하기 위해서는 계정이 필요하다. 먼저 [GitHub](http
 
 ```sh
 git clone https://github.com/[YOUR_NAME]/my-repo
+cd my-repo
 ```
 
 위 명령어를 입력하면 내가 웹에서 만든 원격 저장소의 내용이 내 컴퓨터로 클론된 것을 확인할 수 있다. 만약 `README.md` 파일을 만들었다면, 파일도 함께 클론되었을 것이다.
