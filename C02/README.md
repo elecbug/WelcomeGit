@@ -66,7 +66,7 @@ git remote add origin https://[YOUR_NAME]:[GITHUB_TOKEN]@github.com/[YOUR_NAME]/
 git remote remove origin
 ```
 
-이제 아래의 커맨드를 사용하면 변경사항을 푸시할 수 있다.
+이제 아래의 커맨드를 사용하면 새로운 경로를 사용하게 된다.
 
 ```sh
 git push --set-upstream origin main
@@ -76,7 +76,7 @@ git push --set-upstream origin main
 
 이후에는 토큰이 유효한 이상 간단히 `git push/pull`로 사용 가능하다. 아래의 순서를 따라한 뒤 웹 브라우저에서 내 저장소를 다시 확인해보자.
 
-```
+```sh
 echo "Hello, GitHub!" > github.txt
 git add .
 git commit -m "feat: add github.txt"
