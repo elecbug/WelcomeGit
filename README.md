@@ -3,6 +3,10 @@
 - 컴퓨터 공학 초심자를 위한 Git 시스템 설명 문서
   - Document that explain Git system for junior Computer S&amp;E students
 
+## 설명서
+
+보통 `[YOUR_NAME]`같은 "[]" 사이에 있는 내용은 해당 변수를 입력하라는 의미로 쓰인 것입니다. 가령 닉네임을 `hello`로 생성하고, `https://github.com/[YOUR_NAME]`은 `https://github.com/hello`으로 가라는 의미입니다.
+
 ## 구성
 
 -- 아직 제작 중... --

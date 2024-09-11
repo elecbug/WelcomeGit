@@ -60,7 +60,7 @@ GitHub 토큰은 내 GitHub 계정에 대한 부분적인 권한을 부여하는
 git remote add origin https://[YOUR_NAME]:[GITHUB_TOKEN]@github.com/[YOUR_NAME]/my-repo
 ```
 
-만약 이미 `origin`이 존재한다고 뜰 경우 아래의 커맨드를 먼저 입력한 뒤 위의 커맨드를 다시 시도해보자.
+`[GITHUB_TOKEN]`에는 아까 복사해두었던 `ghp...`을 사용하면 된다. 만약 이미 `origin`이 존재한다고 뜰 경우 아래의 커맨드를 먼저 입력한 뒤 위의 커맨드를 다시 시도해보자.
 
 ```sh
 git remote remove origin
