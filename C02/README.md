@@ -69,7 +69,7 @@ git remote remove origin
 이제 아래의 커맨드를 사용하면 변경사항을 푸시할 수 있다.
 
 ```sh
-git push --set-upstream origin master
+git push --set-upstream origin main
 ```
 
 위 커맨드에서 보았던 `remote`라던가 `origin`이라던가 하는 내용은 다음에 좀 더 자세히 알아보도록 하고, 지금은 기존에 클론했던 `https://github.com/[YOUR_NAME]/my-repo`를 `https://[YOUR_NAME]:[GITHUB_TOKEN]@github.com/[YOUR_NAME]/my-repo`로 바꾸어 인증을 진행한다고 이해하고 있자.
