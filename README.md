@@ -3,9 +3,10 @@
 - 컴퓨터 공학 초심자를 위한 Git 시스템 설명 문서
   - Document that explain Git system for junior Computer S&amp;E students
 
-## 설명서
+## 시작하기 전에...
 
 - 보통 `[YOUR_NAME]`같은 "[]" 사이에 있는 내용은 해당 변수를 입력하라는 의미로 쓰인 것입니다. 가령 닉네임을 `hello`로 생성하고, `https://github.com/[YOUR_NAME]`은 `https://github.com/hello`로 바꾸라는 의미입니다.
+- 리눅스를 기반으로 설명함에도 편의상 디렉토리는 폴더라고 칭하고 있습니다. 이는 폴더를 아는 사람은 디렉토리를 모를 수도 있지만, 그 반대의 경우는 없다고 가정했기 때문입니다.
 
 ## FAQ
 
@@ -17,6 +18,7 @@
 
 |Course|Title|Description|Go|
 |------|-----|-----------|--|
+|# Special 0|Introduce Shell|Shell을 다루는 법을 배우고 익숙해진다.|[Link](./S0/READMD.md)
 |# 01|What is Git?|Git이 무엇인지 알아보고, 기본적인 Git command에 대해 학습한다.|[Link](./C01/README.md)|
 |# 02|Using GitHub|앞서 배운 Git의 기초를 토대로 GitHub 서비스를 이용한다.|[Link](./C02/README.md)|
 |# 03|Merge conflict|Git merge에 대해 이해하고, 충돌을 해결한다.|[Link](./C03/README.md)|
@@ -34,4 +36,4 @@ Email: deveb1479@gmail.com
 
 ## Version Info.
 
-v0.4.3
+v0.5.0
