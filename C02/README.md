@@ -36,8 +36,8 @@ GitHub를 사용하기 위해서는 계정이 필요하다. 먼저 [GitHub](http
 이제 내 컴퓨터에서 원격 저장소의 내용을 복제해 올 시간이다. 앞서 Bare repository를 만든 것을 기억하는가? `git clone [PATH]`를 통해 `[PATH]`에 있는 원격 저장소를 현재 위치로 클론했었다. 이번에는 저 `[PATH]`에 웹 상의 경로를 넣어 복제할 것이다.
 
 ```sh
-git clone https://github.com/[YOUR_NAME]/my-repo
-cd my-repo
+git clone https://github.com/[YOUR_NAME]/my-repo    # GitHub에서 저장소 복제
+cd my-repo                                          # 복제된 저장소로 이동
 ```
 
 위 명령어를 입력하면 내가 웹에서 만든 원격 저장소의 내용이 내 컴퓨터로 클론된 것을 확인할 수 있다. 만약 `README.md` 파일을 만들었다면, 파일도 함께 클론되었을 것이다.
@@ -57,19 +57,20 @@ GitHub 토큰은 내 GitHub 계정에 대한 부분적인 권한을 부여하는
 ### Push
 
 ```sh
-git remote add origin https://[YOUR_NAME]:[GITHUB_TOKEN]@github.com/[YOUR_NAME]/my-repo
+git remote add origin https://[YOUR_NAME]:[GITHUB_TOKEN]@github.com/[YOUR_NAME]/my-repo # Git이 인식하는 경로를 토큰을 포함하게 변경
 ```
 
 `[GITHUB_TOKEN]`에는 아까 복사해두었던 `ghp...`을 사용하면 된다. 만약 이미 `origin`이 존재한다고 뜰 경우 아래의 커맨드를 먼저 입력한 뒤 위의 커맨드를 다시 시도해보자.
 
 ```sh
-git remote remove origin
+git remote remove origin                                                                # 기존에 쓰이던 경로를 삭제
+git remote add origin https://[YOUR_NAME]:[GITHUB_TOKEN]@github.com/[YOUR_NAME]/my-repo # Git이 인식하는 경로를 토큰을 포함하게 변경(재시도)
 ```
 
 이제 아래의 커맨드를 사용하면 새로운 경로를 사용하게 된다.
 
 ```sh
-git push --set-upstream origin main
+git push --set-upstream origin main # 새 경로를 main 브런치와 연결
 ```
 
 위 커맨드에서 보았던 `remote`라던가 `origin`이라던가 하는 내용은 다음에 좀 더 자세히 알아보도록 하고, 지금은 기존에 클론했던 `https://github.com/[YOUR_NAME]/my-repo`를 `https://[YOUR_NAME]:[GITHUB_TOKEN]@github.com/[YOUR_NAME]/my-repo`로 바꾸어 인증을 진행한다고 이해하고 있자.
@@ -77,11 +78,13 @@ git push --set-upstream origin main
 이후에는 토큰이 유효한 이상 간단히 `git push/pull`로 사용 가능하다. 아래의 순서를 따라한 뒤 웹 브라우저에서 내 저장소를 다시 확인해보자.
 
 ```sh
-echo "Hello, GitHub!" > github.txt
-git add .
-git commit -m "feat: add github.txt"
-git push
+echo "Hello, GitHub!" > github.txt      # 파일 추가
+git add .                               # 파일 등록
+git commit -m "feat: add github.txt"    # 파일 커밋
+git push                                # 푸시
 ```
+
+이제 브라우저에서 내 저장소를 확인하면 내가 푸시한 파일이 올라가 있는 것을 볼 수 있다.
 
 만약 내 개인 컴퓨터라면 토큰을 하나 발급하여 로컬에 저장해두고 사용함으로서 간단히 GitHub에 접근할 수 있을 것이다.
 
@@ -90,7 +93,7 @@ git push
 또는 애초에 클론을 진행할 때 토큰을 사용하여 아래와 같이 사용할 수도 있다.
 
 ```sh
-git clone https://[YOUR_NAME]:[GITHUB_TOKEN]@github.com/[YOUR_NAME]/my-repo
+git clone https://[YOUR_NAME]:[GITHUB_TOKEN]@github.com/[YOUR_NAME]/my-repo # 처음부터 경로에 토큰을 포함해서 클론
 ```
 
 이렇게 클론된 저장소는 클론될 때 부터 경로에 토큰이 포함되므로, 별도의 과정없이 커밋과 풀, 푸시 등이 모두 가능하므로 번거로운 과정을 피하고 싶다면 이 방법을 추천한다.

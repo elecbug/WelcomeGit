@@ -71,7 +71,7 @@ Git의 이해를 위해 우선은 내 컴퓨터 하나만을 가지고, 지지�
 우선은 Git을 다운로드 한다. 다음과 같은 명령어를 통해 간단하게 Git을 다운로드 받을 수 있다.
 
 ```sh
-sudo apt-get install git
+sudo apt-get install git    # Git 다운로드
 ```
 
 > 본 문서에서는 Linux의 기본적인 명령어에 대해 부연설명하지 않을 예정이니 궁금하다면 검색을 해보길 바란다.
@@ -82,21 +82,23 @@ sudo apt-get install git
 이제 우리의 Bare repository를 만들어 보자. 아까도 말했듯이 원격 저장소이지만 지금은 그냥 내 컴퓨터 안에 만들거다.
 
 ```sh
-mkdir ~/test-repo && cd ~/test-repo
-git init --bare
+mkdir ~/test-repo   # test-repo 폴더 생성
+cd ~/test-repo      # test-repo로 이동
+git init --bare     # test-repo를 Git 원격 저장소로 만들기
 ```
 
 위와 같은 과정을 거치면 해당 `test-repo` 경로 안에 뭔가 이상한 내용물이 잔뜩 생길 것이다. Git에 대해 진지하게 심도있는 학습을 하고 싶은 것이 아니라 단순히 Git의 사용법만을 익힐 생각이라면, 각 파일에 대해서 깊이있게 알 필요는 없다.
 
-어쨋든 방금 만들어진 + 초기화된 저 `test-repo`가 바로 우리의 원격(~~사실 아님~~) 저장소이다. `git init --bare`는 현재 위치한 폴더을 원격 저장소로 만드는 명령으로, 자주 쓰이지는 않지만 알아두어야 하는 내용이다.
+어쨋든 방금 만들어진 + 초기화된 저 `test-repo`가 바로 우리의 원격(~~사실 아님~~) 저장소이다. `git init --bare`는 현재 위치한 폴더를 원격 저장소로 만드는 명령으로, 자주 쓰이지는 않지만 알아두어야 하는 내용이다.
 
 이제 원격 저장소를 Clone(이하 클론)해서 내용을 수정하고, 업로드 해볼 차례이다. 복제된 저장소의 이름은 기본적으로 원격 저장소의 이름과 같기 때문에 충돌이 발생할 우려가 있으므로, 다른 경로로 이동해서 작업을 진행한다.
 
 ### Git clone
 
 ```sh
-mkdir ~/cloned && cd ~/cloned
-git clone ~/test-repo
+mkdir ~/cloned          # cloned 폴더를 별도로 생성
+cd ~/cloned             # cloned 폴더로 이동
+git clone ../test-repo   # 아까 만든 test-repo를 클론
 ```
 
 내 홈 폴더 내에 `cloned`이라는 하위 폴더를 만들고, 그 안에서 아까 만든 원격 저장소를 복제했다. `git clone [PATH]`는 `[PATH]`에 있는 원격 저장소의 내용을 현재 경로 아래에 복제한다.
@@ -106,8 +108,8 @@ git clone ~/test-repo
 이제 파일을 추가할 차례다. 복제된 저장소에 파일을 만들어보자. 간단하게 `Hello, Git!`이라는 문구를 가진 텍스트 파일을 추가한다.
 
 ```sh
-cd ~/cloned/test-repo
-echo "Hello, Git!" > hello.txt
+cd ~/cloned/test-repo           # 클론된 복제 저장소로 이동
+echo "Hello, Git!" > hello.txt  # 복제 저장소에 파일 추가 및 내용 작성
 ```
 
 이제 해당 복제 저장소는 복제 당시와 비교했을 때 변경사항(`hello.txt` 추가)이 생겼고, 이 변경사항을 원격 저장소에 업로드하여 버전을 관리하게 되는 것이다.
@@ -115,7 +117,7 @@ echo "Hello, Git!" > hello.txt
 Git에 변경사항을 업로드하기 위해서는 우선 업로드 할 파일의 목록을 추가해야 한다. 이는 `add` 명령으로 이루어지며, 다음과 같이 사용한다.
 
 ```sh
-git add hello.txt
+git add hello.txt               # 변경사항 등록
 ```
 
 이제 변경사항 중 `hello.txt`의 추가가 업로드 할 리스트에 등록 되었다고 생각하면 된다. 물론 모든 파일에 대해 이렇게 추가할 필요는 없다. `git add .`을 사용하면 현재 폴더에 속한 모든 파일과 하위 폴더, 그 안의 파일들 까지 모든 변경사항의 업로드를 준비한다.
@@ -127,8 +129,8 @@ git add hello.txt
 Git에는 현재 편집자가 누구인지 알려주어야 하는 특징이 있다. 간단히 아래와 같이 설정을 완료하자.
 
 ```sh
-git config --global user.email [YOUR_EMAIL@example.com]
-git config --global user.name [YOUR_NAME]
+git config --global user.email [YOUR_EMAIL@example.com] # 유저 이메일 설정
+git config --global user.name [YOUR_NAME]               # 유저 이름 설정
 ```
 
 `--global` Flag는 해당 설정을 이 저장소에 대해서만 적용할 건지, 아니면 전역적으로(OS 유저 단위) 설정할 것인지를 정하는 Flag로 특별한 이유가 없다면 `--global`로 하자.
@@ -138,7 +140,7 @@ git config --global user.name [YOUR_NAME]
 추가만 한다고 끝이 아니다. 이제 변경사항을 Commit(이하 커밋) 해야한다. 커밋은 변경사항의 리스트들을 묶어 메시지와 함께 한 버전으로서 기록을 남기는 과정을 말한다.
 
 ```sh
-git commit -m "feat: start to learn git"
+git commit -m "feat: start to learn git"    # 등록된 변경사항들을 묶어서 커밋
 ```
 
 간단히 `commit` 키워드와 메시지 플래그 `-m [MSG]`을 사용해서 `[MSG]`와 함께 변경사항을 기록한다. 이때 메시지는 해당 변경사항을 간단히 나타내는 정도면 충분하며, 보통 일반적인 규칙은 인터넷을 찾으면 잘 나와있다.
@@ -158,7 +160,7 @@ git commit -m "feat: start to learn git"
 지금은 원격 저장소에서 버전을 끌어와서 수정하고, 그 내용을 다시 원격 저장소로 업로드하는 과정이므로 둘 중 푸시가 맞다. 따라서 푸시를 진행하려면 다음과 같이 진행한다.
 
 ```sh
-git push
+git push    # 원격 저장소로 현재 커밋을 푸시
 ```
 
 오류 메시지가 발생하지 않았다면 정상적으로 푸시가 이루어진 것이다. 그렇다면 이제 제대로 업로드 되었는지 확인해 보자. Git 저장소의 정보는 복제 저장소 내에 숨겨진 폴더로 존재하는 `.git`이라는 경로 내에 있다. 즉, 해당 폴더만 건재하다면, 언제든 변경사항을 원격 저장소와 주고받을 수 있다는 이야기이기도 하다.
@@ -166,16 +168,17 @@ git push
 이번에는 우리의 복제 저장소를 지워버린 다음, 다시 클론을 사용하여 우리가 방금 푸시한 버전으로 복구해보자.
 
 ```sh
-cd ~/cloned
-rm -rf ./test-repo
+cd ~/cloned         # 다시 cloned로 이동
+rm -rf ./test-repo  # 아까 복제해두었던 test-repo를 삭제
 ```
 
 위 커맨드를 실행하면 복제 저장소가 사라진다. 이제 다시 원격 저장소에서 버전을 불러와보자.
 
 ```sh
-git clone ~/test-repo
-ls ./test-repo
-cat ./test-repo/hello.txt
+git clone ../test-repo   # 원격 저장소에서 다시 복제
+cd ./test-repo          # 다시 복제한 test-repo로 이동
+ls .                    # 현재 폴더의 내용 확인
+cat ./hello.txt         # hello.txt의 내용 확인
 ```
 
 그리고 다시 한번 원격 저장소에서 업로드 된 버전을 불러오게 되는데, 아까 마지막으로 업로드한 내용 그대로 다시 클론된 것을 알 수 있다.
