@@ -24,7 +24,7 @@ jobs:
       - name: Combine readme-base.md and version into README.md
         run: |
           rm README.md
-          echo -e "$(cat readme-base.md)$(cat version)" > README.md
+          echo -e "$(cat readme-base.md)\n\n$(cat version)" > README.md
 
       - name: Commit and push changes
         run: |
