@@ -99,7 +99,7 @@ git init --bare     # test-repo를 Git 원격 저장소로 만들기
 ```sh
 mkdir ~/cloned          # cloned 폴더를 별도로 생성
 cd ~/cloned             # cloned 폴더로 이동
-git clone ../test-repo   # 아까 만든 test-repo를 클론
+git clone ../test-repo  # 아까 만든 test-repo를 클론
 ```
 
 내 홈 폴더 내에 `cloned`이라는 하위 폴더를 만들고, 그 안에서 아까 만든 원격 저장소를 복제했다. `git clone [PATH]`는 `[PATH]`에 있는 원격 저장소의 내용을 현재 경로 아래에 복제한다.
@@ -176,7 +176,7 @@ rm -rf ./test-repo  # 아까 복제해두었던 test-repo를 삭제
 위 커맨드를 실행하면 복제 저장소가 사라진다. 이제 다시 원격 저장소에서 버전을 불러와보자.
 
 ```sh
-git clone ../test-repo   # 원격 저장소에서 다시 복제
+git clone ../test-repo  # 원격 저장소에서 다시 복제
 cd ./test-repo          # 다시 복제한 test-repo로 이동
 ls .                    # 현재 폴더의 내용 확인
 cat ./hello.txt         # hello.txt의 내용 확인
