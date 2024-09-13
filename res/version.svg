@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* Default fill for light mode */
+    text {
+      fill: black;
+    }
+
+    /* Dark mode fill */
+    @media (prefers-color-scheme: dark) {
+      text {
+        fill: white;
+      }
+    }
+  </style>
+  <text x="0" y="16" font-family="Arial" font-size="16" fill="white">
+    v0.5.2
+    <!--animate attributeName="fill" values="white; black; white" dur="4s" repeatCount="indefinite" /-->
+  </text>
+</svg>

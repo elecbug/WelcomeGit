@@ -40,4 +40,4 @@
 
 ## Version Information
 
-![](./version.svg)
+![](./res/version.svg)
