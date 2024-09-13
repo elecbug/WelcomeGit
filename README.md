@@ -22,11 +22,11 @@
 |Course|Title|Description|Go|
 |------|-----|-----------|--|
 |# Special 0|Introduce Shell|Shell을 다루는 법을 배우고 익숙해진다.|[Link](./S0/READMD.md)
-|# 01|What is Git?|Git이 무엇인지 알아보고, 기본적인 Git command에 대해 학습한다.|[Link](./C01/README.md)|
-|# 02|Using GitHub|앞서 배운 Git의 기초를 토대로 GitHub 서비스를 이용한다.|[Link](./C02/README.md)|
-|# 03|Merge conflict|Git merge에 대해 이해하고, 충돌을 해결한다.|[Link](./C03/README.md)|
+|# Course 01|What is Git?|Git이 무엇인지 알아보고, 기본적인 Git command에 대해 학습한다.|[Link](./C01/README.md)|
+|# Course 02|Using GitHub|앞서 배운 Git의 기초를 토대로 GitHub 서비스를 이용한다.|[Link](./C02/README.md)|
+|# Course 03|Merge conflict|Git merge에 대해 이해하고, 충돌을 해결한다.|[Link](./C03/README.md)|
 |# Special 1|Git ignore|Git ignore 파일에 대해 학습한다.|[Link](./S1/READMD.md)
-|# 04|Fork and PR|Fork와 PR에 대해 이해하고, 진정한 의미의 협업을 배운다.|[Link](./C04/README.md)|
+|# Course 04|Fork and PR|Fork와 PR에 대해 이해하고, 진정한 의미의 협업을 배운다.|[Link](./C04/README.md)|
 
 ## 이하 기타 사항
 
