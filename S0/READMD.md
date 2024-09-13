@@ -11,7 +11,7 @@
 현재도 CLI는 간단한 작업을 위해 사용되기도 하며, 그렇기에 GUI 컴퓨터라도 CLI를 내장해주고 있다. 지금 한번 셸 창을 열어보자.
 
 > Win: Windows Power Shell을 사용, CMD는 사용하지 않을 건데, Linux와 다른 부분이 너무 많기 때문이다.
-> 
+>
 > Linux: Linux Shell을 사용
 >
 
@@ -43,7 +43,7 @@
 
 ### mkdir (make directory)
 
-`mkdir`은 이름처럼 폴더을 만드는 기본적인 명령어로, 간단하게 `mkdir [PATH]`로 사용한다.
+`mkdir`은 이름처럼 폴더를 만드는 기본적인 명령어로, 간단하게 `mkdir [PATH]`로 사용한다.
 
 ### touch **Only Linux**
 

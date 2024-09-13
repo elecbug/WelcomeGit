@@ -5,7 +5,10 @@
 
 ## 시작하기 전에...
 
-- 보통 `[YOUR_NAME]`같은 "[]" 사이에 있는 내용은 해당 변수를 입력하라는 의미로 쓰인 것입니다. 가령 닉네임을 `hello`로 생성하고, `https://github.com/[YOUR_NAME]`은 `https://github.com/hello`로 바꾸라는 의미입니다.
+- 보통 `[YOUR_NAME]`같은 "[]" 사이에 있는 내용은 해당 변수를 입력하라는 의미로 쓰인 것입니다.
+  - 만약 닉네임이 `hello`인데, `https://github.com/[YOUR_NAME]`를 입력하라는 것은 `https://github.com/hello`로 바꾸라는 의미입니다.
+- 만약 "[]" 안에 두개 이상의 변수가 들어갈 수 있을 때는 보통 `[OPTION_A|OPTION_B]`의 형태가 사용됩니다.
+  - 예를들어, `git [pull|fetch]`는 `git pull` 혹은 `git fetch`라는 의미입니다.
 - 리눅스를 기반으로 설명함에도 편의상 디렉토리는 폴더라고 칭하고 있습니다. 이는 폴더를 아는 사람은 디렉토리를 모를 수도 있지만, 그 반대의 경우는 없다고 가정했기 때문입니다.
 
 ## FAQ
@@ -30,10 +33,11 @@
 1. 본 문서는 한국어를 사용하여 작성되어 있으며, 본 문서의 번역에 관심이 있으신 분은 [아래 이메일](mailto:deveb1479@gmail.com)로 문의 바랍니다.
 2. 본 문서의 수정 사항 및 오류 등에 대한 문의는 Pull request 및 Issue 기능을 활용하여 주시기 바랍니다.
 
-## Maintainer Information
+## Manager Information
 
-Email: deveb1479@gmail.com
+- Academic ability: Dept. Computer S&E, 4th grade
+- Email: deveb1479@gmail.com
 
-## Version Info.
+## Version Information
 
 ![](./version.svg)

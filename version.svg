@@ -1,3 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="200" height="100">
-  <text x="10" y="40" font-family="Arial" font-size="24" fill="black">v0.5.1</text>
+  <text x="0" y="16" font-family="Arial" font-size="16" fill="white">
+    v0.5.2
+    <animate attributeName="fill" values="white; black; white" dur="4s" repeatCount="indefinite" />
+  </text>
 </svg>
