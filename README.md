@@ -36,4 +36,4 @@ Email: deveb1479@gmail.com
 
 ## Version Info.
 
-v0.5.0
+![](./version.svg)
