@@ -13,7 +13,7 @@ VS Code는 전통적인 의미의 IDE보다는 텍스트 에디터에 가깝긴 
 
 ## Source Control
 
-VS Code용 Git 도구는 별도의 설치 과정 없이, 내 컴퓨터에 Git이 설치되어 있다면, VS Code를 켜자마자 왼쪽 내비게이션 바에 표시되게 된다. [Ctrl+Shift+X]를 누르거나, 왼쪽의 Git 모양 버튼을 눌러 Git 창을 사용할 수 있다. 오늘은 일전에 사용한 `my-repo`를 사용하여 VS Code용 Git을 다뤄보자.
+VS Code용 Git 도구는 별도의 설치 과정 없이, 내 컴퓨터에 Git이 설치되어 있다면, VS Code를 켜자마자 왼쪽 내비게이션 바에 표시되게 된다. 왼쪽의 Git 모양 버튼을 눌러 Git 창을 사용할 수 있다. 오늘은 일전에 사용한 `my-repo`를 사용하여 VS Code용 Git을 다뤄보자.
 
 ## 실습
 
