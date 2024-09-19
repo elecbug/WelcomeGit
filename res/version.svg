@@ -13,7 +13,7 @@
     }
   </style>
   <text x="0" y="16" font-family="Arial" font-size="16" fill="white">
-    v0.5.2
+    v0.6.0
     <!--animate attributeName="fill" values="white; black; white" dur="4s" repeatCount="indefinite" /-->
   </text>
 </svg>

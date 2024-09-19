@@ -26,7 +26,8 @@
 |# Course 02|Using GitHub|앞서 배운 Git의 기초를 토대로 GitHub 서비스를 이용한다.|[Link](./C02/README.md)|
 |# Course 03|Merge conflict|Git merge에 대해 이해하고, 충돌을 해결한다.|[Link](./C03/README.md)|
 |# Special 1|Git ignore|Git ignore 파일에 대해 학습한다.|[Link](./S1/READMD.md)
-|# Course 04|Fork and PR|Fork와 PR에 대해 이해하고, 진정한 의미의 협업을 배운다.|[Link](./C04/README.md)|
+|# Course 04|Fork and PR|Fork와 PR에 대해 이해하고, Fork & PR 기반 협동을 학습한다.|[Link](./C04/README.md)|
+|# Course 05|VS Code is GOAT|Visual Studio Code를 사용한 GitHub 연동과 Git의 기능을 사용한다.|[Link](./C05/README.md)|
 
 ## 이하 기타 사항
 
